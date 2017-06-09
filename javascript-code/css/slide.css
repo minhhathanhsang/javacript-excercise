@@ -1,0 +1,134 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 31, 2017, 8:59:42 AM
+    Author     : MinhHaThanhSang
+*/
+
+/**
+ * Whole slide frame.
+ */
+.slide__image__container{
+    width:800px;
+    height: 400px;
+}
+
+/**
+ * Big image frame.
+ */
+.screen__image__frame{
+    
+    width:100%;
+    height:80%;
+}
+
+/**
+ * Image in big frame. 
+ */
+.screen__image__frame img{
+    width:100%;
+    height:98%;
+    
+    
+}
+
+/**
+ * Frame contains preview button, next button, small image list. 
+ */
+.button__controll__frame{
+    
+    width:100%;
+    height:20%;
+}
+
+/**
+ * Preview button panel.
+ */
+.pre__panel{
+    float:left;
+    width:10%;
+    height:100%;
+    
+}
+
+/**
+ * Image slide list panel.
+ */
+.small__image__list__panel{
+    
+    float:left;
+    width: 80%;
+    height:100%;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+/**
+ * image slide panel in image slide list panel.
+ */
+.small__image__list__panel .image__slide{
+    
+    display: inline-block;
+    width: 24%;
+    height:90%;
+}
+
+/**
+ * image in image slide panel.
+ */
+.image__slide img{
+    width: 100%;
+    height:100%;    
+}
+
+/**
+ * image slide was selected.
+ */
+.image__slide__active{
+    border: 1px solid red;
+}
+
+/**
+ * next button panel.
+ */
+.next__panel{
+    float:left;    
+    width:10%;
+    height:100%;
+    
+}
+
+/**
+ * next shape.
+ */
+.right__arrow{ 
+    margin-left: 1vw;
+    width: 0px;
+    height: 0px;
+    border-top: 2vw solid transparent;
+    border-left: 2vw solid red;
+    border-bottom: 2vw solid transparent;
+}
+
+/**
+ * preview shape.
+ */
+.left__arrow{ 
+    float:right;
+    margin-right: 1vw;
+    width: 0px;
+    height: 0px;
+    border-top: 2vw solid transparent;
+    border-right: 2vw solid red;
+    border-bottom: 2vw solid transparent;
+}
+
+/**
+ * mouse pointer.
+ */
+.hand-pointer{
+    cursor: pointer;
+}
