@@ -26,7 +26,7 @@
 
     for (i = 0; i < image__slide__list.length; i++) {
         /**
-         * registing fucntion for click event.
+         * registing fucntion for mouse click event.
          * @returns {undefined}.
          */
         image__slide__list[i].onclick = (function() {            
