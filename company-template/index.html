@@ -43,13 +43,15 @@
 		<p>
 			We specialize in building applications
 		</p> 
-		<form class="form-inline">
-			<div class="input-group">
-				<input type="email" class="form-control" size="50" placeholder="Email Address" required>
-				<div class="input-group-btn">
-					<button type="button" class="btn btn-danger">Subscribe</button>
-				</div>
-			</div>
+		<form id="subscription-form" method="post" class="form-inline">
+        <div class="row">     
+           <div class="input-group">
+               <input name="email-subcription" type="text" class="form-control" size="50" placeholder="Email Address">
+               <div class="input-group-btn">
+                   <button id="btn-subcription" type="button" class="btn btn-danger">Subscribe</button>
+               </div>
+           </div>
+        </div>                
 		</form>
 	</div>
 
@@ -269,39 +271,32 @@
       <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
     </div>
     <div class="col-sm-7">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+      <form id="contact-form">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name-contact" placeholder="Name" type="text">
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email-contact" placeholder="Email" type="email">
+          </div>
         </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        <div class="form-group">
+            <textarea class="form-control" id="comments" name="comments-contact" placeholder="Comment" rows="5"></textarea><br>
+        </div>       
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button id="btn-contact" class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
         </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>
 
 <!-- Add Google Maps -->
 <div id="googleMap" style="height:400px;width:100%;"></div>
-        <script src="./js/jquery-3.1.1.min.js"></script>
-		<script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-		<script>
-function myMap() {
-var myCenter = new google.maps.LatLng(10.69654, 106.59523);
-var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-var marker = new google.maps.Marker({position:myCenter});
-marker.setMap(map);
-}
-</script>
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpgpdLqevZ6UAXgeZCdv4-ARa6zfXOdw0&callback=myMap"></script>
-
+        
+        
 <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
@@ -312,43 +307,10 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
 </footer>
-
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-})
-</script>
-
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+		<script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script src="./js/company.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpgpdLqevZ6UAXgeZCdv4-ARa6zfXOdw0&amp;callback=myMap"></script>
 </body>
 </html>
